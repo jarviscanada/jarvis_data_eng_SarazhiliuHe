@@ -23,3 +23,16 @@ It allows users to easily create, start, and stop a local PostgreSQL container f
   - check the file permissions `ls -l psql_docker.sh`
   - Add execute permission to the file `chmod +x psql_docker.sh`
   
+## ddl.sql
+A SQL script used to create and initialize the schema 
+for a PostgreSQL database `host_agent`.
+
+- Create a table to store hardware specifications: `host_info`
+  - CPU number, architecture, model, Mhz, L2_cache, total memory
+- Create a table to resource usage data: `host_usage`
+  - CPU Idle, Kernel, disk I/O, disk available, free memory
+
+### Usage
+```bash
+psql -h localhost -U postgres -d host_agent -f ./ddl.sql
+```
