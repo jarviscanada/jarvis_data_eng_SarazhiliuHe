@@ -36,3 +36,17 @@ for a PostgreSQL database `host_agent`.
 ```bash
 psql -h localhost -U postgres -d host_agent -f ./ddl.sql
 ```
+
+## Monitoring Agent
+- `host_info.sh`: a script to collect hardware specification data and insert the data into the psql instance. 
+- `host_usage.sh`: a script to collect server usage data and insert the data into the psql database.
+
+### Usage
+- hardware specification data
+```bash
+./host_info.sh psql_host psql_port db_name psql_user psql_password
+```
+- resource usage data
+```bash
+./host_usage.sh psql_host psql_port db_name psql_user psql_password
+```
