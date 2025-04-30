@@ -2,8 +2,10 @@
 
 ## Introduction
 
-This project is designed for developers and LCAs to manage linux system data.
-Technologies used in this project: bash, docker, git, postgreSQL.
+The Jarvis Linux Cluster Monitoring Agent is a Minimum Viable Product (MVP) designed to help the Linux Cluster Administration (LCA) team manage a multi-node Rocky Linux cluster. 
+This project uses a Bash agent to collect and store each node's hardware specification and real-time resource usage information in a PostgreSQL database running in a Docker container. 
+This application can support report generation and resource planning.
+Technologies used include Bash, Docker, PostgreSQL and Git.
 
 ## Quick Start
 Suppose the user name is "postgres" and the password is "sara":
