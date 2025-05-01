@@ -5,7 +5,7 @@
 The Jarvis Linux Cluster Monitoring Agent is a Minimum Viable Product (MVP) designed to help the Linux Cluster Administration (LCA) team manage a multi-node Rocky Linux cluster. 
 This project uses a Bash agent to collect and store each node's hardware specification and real-time resource usage information in a PostgreSQL database running in a Docker container. 
 This application can support report generation and resource planning.
-Technologies used include Bash, Docker, PostgreSQL and Git.
+Technologies used include Bash, Docker, PostgreSQL, and Git.
 
 ## Quick Start
 Suppose the user name is "postgres" and the password is "sara":
@@ -52,12 +52,16 @@ Suppose the user name is "postgres" and the password is "sara":
 
 ### Architecture
 The Linux Cluster Monitoring setup consists of
-three Linux hosts, a Database, and multiple agents. 
+three Linux hosts, a Database, and multiple agents.
+- A `psql` instance running in Docker on one host is used to create a database and store all collected data.
+- The `bash agent` runs on each host/server/node to gather system information and resource usage, and inserts the data into the psql instance.
+
+![linux_cluster](./assets/linux_cluster.drawio.png)
 
 ### Scripts
 #### 1. psql_docker.sh
 
-A shell script to provision and manages a PostgreSQL instance using Docker.
+A shell script to provision and manage a PostgreSQL instance using Docker.
 It allows users to easily create, start, and stop a local PostgreSQL container for development.
 
 ##### Usage
@@ -80,12 +84,12 @@ It allows users to easily create, start, and stop a local PostgreSQL container f
   - Add execute permission to the file `chmod +x psql_docker.sh`
   
 #### 2. ddl.sql
-A SQL script used to create and initialize the schema 
+This SQL script is used to create and initialize the schema 
 for a PostgreSQL database `host_agent`.
 
 - Create a table to store hardware specifications: `host_info`
   - CPU number, architecture, model, Mhz, L2_cache, total memory
-- Create a table to resource usage data: `host_usage`
+- Create a table to store resource usage data: `host_usage`
   - CPU Idle, Kernel, disk I/O, disk available, free memory
 
 ##### Usage
@@ -107,7 +111,7 @@ psql -h localhost -U postgres -d host_agent -f ./ddl.sql
 ./host_usage.sh psql_host psql_port db_name psql_user psql_password
 ```
 
-### Database Modeling
+### Database ModelingS
 
 The database `host_agent` is designed to store system information and resource usage from multiple Linux hosts.
 The database `host_agent` consists of two tables: `host_info`
@@ -133,7 +137,7 @@ since this information rarely changes.
 This table stores the resource usage information, which
 need to be tracked over time and thus data will be inserted into this table every minute.
 - `timestamp`: The exact date and time when the data were collected.
-- `host_id`: Foreign Key that references the `id` field in the `host_info` table.
+- `host_id`: Foreign Key referencing the `id` field in the `host_info` table.
 - `memory_free`: Amount of free (available) memory.
 - `cpu_idle`: The percentage of time the CPU is idle (not used).
 - `cpu_kernel`: The percentage of CPU time spent on kernel-level operations.
@@ -165,5 +169,5 @@ need to be tracked over time and thus data will be inserted into this table ever
 
 ## Improvements
 - Add a wrapper script to execute all setup steps automatically.
-- Add `status` option to `psql_docker.sh` to allow users to check if the container is running.
+- Add the `status` option to `psql_docker.sh` to allow users to check if the container is running.
 - Add `DROP` commands to `ddl.sql` to delete old tables and recreate them when schema changes are needed.
