@@ -86,11 +86,66 @@ docker exec -it jrvs-psql psql -U postgres
 
 ## Practice SQL Queries
 
-###### Question 1: Show all members
+### Modifying Data
+
+Question 1: Add a new facility - a spa - into the facilities table:
+```sql
+-- solution:
+INSERT INTO cd.facilities (...) VALUES (...);
+-- test: check DBeaver output
+SELECT * FROM cd.facilities WHERE name = 'Spa';
+```
+Question 2:
 
 ```sql
 SELECT *
 FROM cd.members
 ```
+Question 3:
 
-###### Question 2:
+```sql
+SELECT *
+FROM cd.members
+```
+Question 4:
+
+```sql
+SELECT *
+FROM cd.members
+```
+Question 5:
+
+```sql
+SELECT *
+FROM cd.members
+```
+Question 6:
+
+```sql
+SELECT *
+FROM cd.members
+```
+### Basics
+Question 1:
+```sql
+SELECT *
+FROM cd.members
+```
+### Join
+Question 1:
+```sql
+SELECT *
+FROM cd.members
+```
+### Aggregation
+Question 1:
+```sql
+SELECT *
+FROM cd.members
+```
+### String
+Question 1:
+```sql
+SELECT *
+FROM cd.members
+```
