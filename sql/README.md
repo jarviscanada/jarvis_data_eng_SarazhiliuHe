@@ -6,7 +6,7 @@ This project is built for SQL learning and SQL queries practice.
 The database is designed for a country club, with a set of members,
 facilities, and booking history for the facilities. 
 
-### 1. members table
+##### 1. members table
 
 Each member has an ID, basic address information, a reference to the member that recommended them (if any), 
 and a timestamp for when they joined.
@@ -26,7 +26,7 @@ CREATE TABLE members (
                      REFERENCES members(memid) ON DELETE SET NULL
 );
 ```
-### 2. facilities table
+##### 2. facilities table
 
 This table lists all the bookable facilities that the country club possesses. 
 The club stores id and name information, the cost to book for both members and guests, 
@@ -44,7 +44,7 @@ the initial cost to build the facility, and estimated monthly upkeep costs.
        CONSTRAINT facilities_pk PRIMARY KEY (facid)
     );
 ```
-### 3. bookings table
+##### 3. bookings table
 
 This table tracks bookings of facilities. 
 It stores the facility id, the member who made the booking, the start of the booking, 
@@ -63,6 +63,27 @@ and how many half-hour 'slots' the booking was made for.
        CONSTRAINT fk_bookings_memid FOREIGN KEY (memid) REFERENCES members(memid)
     );
 ```
+
+##### 4. Implementation
+- Start a PostgreSQL instance using docker.
+```bash
+./linux_sql/scripts/psql_docker.sh start
+```
+
+- Use `clubdata.sql` file to initialize a database `exercises` - create tables,
+load sample data and set index.
+```bash
+# 1. copy clubdata.sql into the Docker container jrvs-psql
+docker cp ./clubdata.sql jrvs-psql:/tmp/clubdata.sql
+
+# 2. execute the psql CLI inside the Docker container
+docker exec -it jrvs-psql psql -U postgres
+
+# 3. psql internal command: import and execute clubdata.sql
+\i /tmp/clubdata.sql
+
+```
+
 ## Practice SQL Queries
 
 ###### Question 1: Show all members
