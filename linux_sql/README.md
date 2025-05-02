@@ -111,7 +111,7 @@ psql -h localhost -U postgres -d host_agent -f ./ddl.sql
 ./host_usage.sh psql_host psql_port db_name psql_user psql_password
 ```
 
-### Database ModelingS
+### Database Modeling
 
 The database `host_agent` is designed to store system information and resource usage from multiple Linux hosts.
 The database `host_agent` consists of two tables: `host_info`
