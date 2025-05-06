@@ -241,7 +241,7 @@ Question 16:
 Produce a list of all members, along with their recommender, using no joins
 How can you output a list of all members, including the individual who recommended them (if any), without using any joins? Ensure that there are no duplicates in the list, and that each firstname + surname pairing is formatted as a column and ordered.
 ```sql
-SELECT firstname || ' ' || surname AS name,
+SELECT DISTINCT firstname || ' ' || surname AS name,
        (SELECT firstname || ' ' || surname
         FROM cd.members r
         WHERE r.memid = m.recommendedby) AS recommender
@@ -249,15 +249,138 @@ FROM cd.members m
 ORDER BY name;
 
 ```
+
 ### Aggregation
-Question 1:
+Question 17:
+Count the number of recommendations each member makes
+Produce a count of the number of recommendations each member has made. Order by member ID.
 ```sql
-SELECT *
-FROM cd.members
+SELECT <member_id>, COUNT(*) AS <count_alias>
+FROM <table>
+    JOIN <table> ON <join_condition>
+GROUP BY <member_id>
+ORDER BY <member_id>;
+
 ```
+Question 18:
+List the total slots booked per facility
+Produce a list of the total number of slots booked per facility.
+```sql
+SELECT <group_column>, SUM(<column>) AS <alias>
+FROM <table>
+GROUP BY <group_column>
+ORDER BY <group_column>;
+
+```
+Question 19:
+List the total slots booked per facility in a given month
+Produce a list of the total number of slots booked per facility in the month of September 2012. Produce an output table consisting of facility id and slots, sorted by the number of slots.
+```sql
+SELECT <group_column>, SUM(<column>) AS <alias>
+FROM <table>
+WHERE <date_column> BETWEEN '<start_date>' AND '<end_date>'
+GROUP BY <group_column>
+ORDER BY <alias>;
+
+```
+
+Question 20:
+List the total slots booked per facility per month
+Produce a list of the total number of slots booked per facility per month in the year of 2012. Produce an output table consisting of facility id and slots, sorted by the id and month.
+```sql
+-- EXTRACT function
+SELECT facid,
+       EXTRACT(MONTH FROM starttime) AS month,
+       SUM(slots) AS total_slots
+FROM cd.bookings
+WHERE EXTRACT(YEAR FROM starttime) = 2012
+GROUP BY facid, month
+ORDER BY facid, month;
+
+```
+Question 21:
+Find the count of members who have made at least one booking
+Find the total number of members (including guests) who have made at least one booking.
+```sql
+SELECT COUNT(DISTINCT <member_id>)
+FROM <table>;
+
+```
+Question 22:
+List each member's first booking after September 1st 2012
+Produce a list of each member name, id, and their first booking after September 1st 2012. Order by member ID.
+```sql
+SELECT <name_columns>, <member_id>, MIN(<date_column>) AS <alias>
+FROM <table1>
+JOIN <table2> ON <join_condition>
+WHERE <date_column> > '<YYYY-MM-DD>'
+GROUP BY <member_id>, <name_columns>
+ORDER BY <member_id>;
+
+```
+Question 23:
+Produce a list of member names, with each row containing the total member count. Order by join date, and include guest members.
+```sql
+SELECT <name_columns>, <subquery_or_window> AS total_members
+FROM <table>
+ORDER BY <date_column>;
+
+```
+Question 24:
+Produce a monotonically increasing numbered list of members (including guests), ordered by their date of joining. Remember that member IDs are not guaranteed to be sequential.
+```sql
+SELECT ROW_NUMBER() OVER (ORDER BY <date_column>) AS row_number, <columns>
+FROM <table>;
+
+```
+Question 25:
+Output the facility id that has the highest number of slots booked. Ensure that in the event of a tie, all tieing results get output.
+```sql
+SELECT <group_column>, total_slots
+FROM (
+    SELECT <group_column>, SUM(<column>) AS total_slots,
+    RANK() OVER (ORDER BY SUM(<column>) DESC) AS rank
+    FROM <table>
+    GROUP BY <group_column>
+    ) AS ranked
+WHERE rank = 1;
+
+```
+
 ### String
-Question 1:
+
+Question 26:
+Format the names of members
+Output the names of all members, formatted as 'Surname, Firstname'.
 ```sql
-SELECT *
-FROM cd.members
+SELECT <column1> || ', ' || <column2> AS <alias>
+FROM <table>;
+
 ```
+Question 27:
+Find all the telephone numbers that contain parentheses, returning the member ID and telephone number sorted by member ID.
+```sql
+-- use LIKE
+SELECT memid, telephone
+FROM cd.members
+WHERE telephone LIKE '%(%'
+   OR telephone LIKE '%)%'
+ORDER BY memid;
+-- use ~ and regex
+SELECT memid, telephone
+FROM cd.members
+WHERE telephone ~ '[()]'
+ORDER BY memid;
+
+
+```
+Question 28:
+Count the number of members whose surname starts with each letter of the alphabet
+```sql
+SELECT SUBSTRING(surname, 1, 1) AS first_letter, COUNT(*) AS count
+FROM cd.members
+GROUP BY first_letter
+ORDER BY first_letter;
+
+```
+
