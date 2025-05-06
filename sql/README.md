@@ -84,11 +84,13 @@ docker exec -it jrvs-psql psql -U postgres
 
 ```
 
-## Practice SQL Queries
+## SQL Queries Practice
 
 ### Modifying Data
 
-Question 1: Add a new facility - a spa - into the facilities table:
+Question 1:
+Insert some data into a table:
+Add a new facility - a spa - into the facilities table:
 ```sql
 -- solution:
 INSERT INTO cd.facilities (...) VALUES (...);
@@ -96,46 +98,156 @@ INSERT INTO cd.facilities (...) VALUES (...);
 SELECT * FROM cd.facilities WHERE name = 'Spa';
 ```
 Question 2:
+Insert calculated data into a table:
+Let's try adding the spa to the facilities table again. This time, though, we want to automatically generate the value for the next facid, rather than specifying it as a constant.
 
 ```sql
-SELECT *
-FROM cd.members
+INSERT INTO cd.facilities (...)
+VALUES (
+               (SELECT MAX(facid) + 1 FROM cd.facilities),
+                ...
+       );
 ```
-Question 3:
 
+Question 3:
+Update some existing data:
+We made a mistake when entering the data for the second tennis court. The initial outlay was 10000 rather than 8000.
 ```sql
-SELECT *
-FROM cd.members
+UPDATE <table>
+SET <column> = <value>
+WHERE <condition>;
+
 ```
 Question 4:
+Update a row based on the contents of another row.
 
 ```sql
-SELECT *
-FROM cd.members
+UPDATE <table>
+SET <column> = (
+    SELECT <column> * factor FROM <table> WHERE <condition>
+    )
+WHERE <condition>;
 ```
 Question 5:
+Delete all bookings: As part of a clearout of our database, we want to delete all bookings from the cd.bookings table.
 
 ```sql
-SELECT *
-FROM cd.members
+DELETE FROM <table>;
+
 ```
 Question 6:
-
+Delete a member from the cd.members table:
+We want to remove member 37, who has never made a booking, from our database.
 ```sql
-SELECT *
-FROM cd.members
+DELETE FROM <table>
+WHERE <condition>
+  AND <id_column> NOT IN (
+    SELECT <id_column> FROM <related_table>
+    );
+
 ```
 ### Basics
-Question 1:
+Question 7:
+Control which rows are retrieved:
+produce a list of facilities that charge a fee to members, and that fee is less than 1/50th of the monthly maintenance cost? Return the facid, facility name, member cost, and monthly maintenance of the facilities.
 ```sql
-SELECT *
-FROM cd.members
+SELECT <columns>
+FROM <table>
+WHERE <condition1>
+  AND <condition2>;
+
+```
+Question 8:
+Basic string searches
+How can you produce a list of all facilities with the word 'Tennis' in their name?
+```sql
+SELECT <columns>
+FROM <table>
+WHERE <column> LIKE '%word%';
+```
+Question 9:
+Matching against multiple possible values
+How can you retrieve the details of facilities with ID 1 and 5? Try to do it without using the OR operator.
+```sql
+SELECT <columns>
+FROM <table>
+WHERE <column> IN (<value1>, <value2>);
+
+```
+
+Question 10:
+Working with dates
+How can you produce a list of members who joined after the start of September 2012? Return the memid, surname, firstname, and joindate of the members in question.
+```sql
+SELECT <columns>
+FROM <table>
+WHERE <date_column> > '<YYYY-MM-DD>';
+
+```
+
+Question 11:
+Combining results from multiple queries: a combined list of all surnames and all facility names.
+```sql
+SELECT <column> FROM <table1>
+UNION
+SELECT <column> FROM <table2>;
+
 ```
 ### Join
-Question 1:
+Question 12:
+Retrieve the start times of members' bookings
+How can you produce a list of the start times for bookings by members named 'David Farrell'?
 ```sql
-SELECT *
-FROM cd.members
+SELECT <column>
+FROM <table1>
+    JOIN <table2> ON <join_condition>
+WHERE <condition>;
+
+```
+Question 13:
+Work out the start times of bookings for tennis courts
+How can you produce a list of the start times for bookings for tennis courts, for the date '2012-09-21'? Return a list of start time and facility name pairings, ordered by the time.
+```sql
+SELECT <columns>
+FROM <table1>
+JOIN <table2> ON <join_condition>
+WHERE <column> LIKE '%keyword%'
+  AND <date_column>::date = '<YYYY-MM-DD>'
+ORDER BY <date_column>;
+
+```
+Question 14:
+Produce a list of all members, along with their recommender
+How can you output a list of all members, including the individual who recommended them (if any)? Ensure that results are ordered by (surname, firstname).
+```sql
+SELECT <columns>
+FROM <table1> AS a
+LEFT JOIN <table1> AS b ON a.<ref_column> = b.<id_column>
+ORDER BY a.<sort_column1>, a.<sort_column2>;
+
+```
+Question 15:
+Produce a list of all members who have recommended another member (JOIN = INNER JOIN)
+How can you output a list of all members who have recommended another member? 
+Ensure that there are no duplicates in the list, and that results are ordered by (surname, firstname).
+```sql
+SELECT DISTINCT <columns>
+FROM <table1>
+JOIN <table2> ON <table1.id> = <table2.ref_column>
+ORDER BY <sort_column1>, <sort_column2>;
+
+```
+Question 16:
+Produce a list of all members, along with their recommender, using no joins
+How can you output a list of all members, including the individual who recommended them (if any), without using any joins? Ensure that there are no duplicates in the list, and that each firstname + surname pairing is formatted as a column and ordered.
+```sql
+SELECT firstname || ' ' || surname AS name,
+       (SELECT firstname || ' ' || surname
+        FROM cd.members r
+        WHERE r.memid = m.recommendedby) AS recommender
+FROM cd.members m
+ORDER BY name;
+
 ```
 ### Aggregation
 Question 1:
