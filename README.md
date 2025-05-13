@@ -17,22 +17,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 
 **Linux Cluster Monitoring Agent** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/linux_sql)]: Built the Jarvis Linux Cluster Monitoring Agent to assist the Linux Cluster Administration (LCA) team in managing a multi-node Rocky Linux environment. Implemented a Bash Script to collect static system information, such as CPU architecture, memory, and disk specs, executed once on each node. Automated the collection of real-time resource usage data, such as CPU, memory, and disk usage, using a Bash script triggered by a Cron job every minute. Deployed a PostgreSQL database in a Docker container to store the collected data in a portable environment. Used Git and GitHub for source code management and version control.
 
-**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/core_java)]:
-      
-  - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-
-**Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/springboot)]: Not Started
-
-**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/python_data_anlytics)]: Not Started
-
-**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/hadoop)]: Not Started
-
-**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/spark)]: Not Started
-
-**Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/cloud_devops)]: Not Started
-
 
 ## Highlighted Projects
 **MasterMind** [[GitHub](https://github.com/Sara-Ho99/master-mind)]: Developed and maintained a web application for educational content creators using Next.js and TypeScript, and created reusable UI components to enhance consistency and maintainability. Designed and optimized PostgreSQL databases using Prisma ORM for seamless and efficient data interactions. Implemented security best practices, including role-based access control, and integrated secure authentication with Clerk. Deployed the application on Vercel, ensuring fast load times and global availability.
