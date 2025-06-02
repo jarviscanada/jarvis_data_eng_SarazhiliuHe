@@ -1,6 +1,6 @@
 # Sara Zhiliu He . Jarvis Consulting
 
-I earned a Master's degree in Systems Design Engineering (Artificial Intelligence and Machine Learning Specialization) from the University of Waterloo in October 2024, where I built great foundation for software engineering and AI. Eager to expand my skill set, I completed a software engineering diploma program at BrainStation in February 2025, gaining hands-on experience in full-stack web development. I am an energetic software developer with a solid foundation in data structures, algorithms, programming languages (Java, JavaScript, Python), databases, and a passion for learning and applying new technologies to solve complex problems and build innovative solutions.
+I earned a Master's degree in Systems Design Engineering (Artificial Intelligence and Machine Learning Specialization) from the University of Waterloo, where I built great foundation for software engineering and AI. Eager to expand my skill set, I completed a software engineering diploma program at BrainStation, gaining hands-on experience in full-stack web development. I am an energetic software developer with professional experience as a Software Engineer at Jarvis and volunteer experience as a full-stack developer at Skill4Skill, driven by a passion for learning and applying new technologies to solve real-world problems and build innovative solutions.
 
 ## Skills
 
@@ -16,6 +16,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 
 
 **Linux Cluster Monitoring Agent** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/linux_sql)]: Built the Jarvis Linux Cluster Monitoring Agent to assist the Linux Cluster Administration (LCA) team in managing a multi-node Rocky Linux environment. Implemented a Bash Script to collect static system information, such as CPU architecture, memory, and disk specs, executed once on each node. Automated the collection of real-time resource usage data, such as CPU, memory, and disk usage, using a Bash script triggered by a Cron job every minute. Deployed a PostgreSQL database in a Docker container to store the collected data in a portable environment. Used Git and GitHub for source code management and version control.
+
+**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/core_java)]: Grep App: Developed Grep App, a Java application that mimics the Linux grep command to search for lines matching a regular expression across a directory of text files. Leveraged Java 8 Lambda and Stream APIs for efficient and readable data processing. Utilized Maven for project build and dependency management. Dockerized the application for seamless distribution and deployment.
 
 
 ## Highlighted Projects
