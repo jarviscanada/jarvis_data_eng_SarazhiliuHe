@@ -25,10 +25,13 @@ It uses Java, Lambda and Stream APIs for efficient data processing. The project 
 4. Run in Docker:
 
    ```bash
+   # Pull the Image from Docker Hub
+   docker pull saraho99/grep
+   # Run the Image
    docker run --rm \
      -v $(pwd)/data:/data \
-     -v $(pwd)/log:/log \
-     your_docker_id/grep ".*Romeo.*Juliet.*" /data /log/grep.out
+     -v $(pwd)/out:/out \
+     saraho99/grep ".*Romeo.*Juliet.*" /data /out/grep.out
    ```
 
 ## Implementation
