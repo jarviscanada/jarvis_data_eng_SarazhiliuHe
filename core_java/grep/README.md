@@ -90,8 +90,8 @@ We fixed this by using the `Stream` API and `BufferedReader` to process lines on
 
 ## Test
 
-We manually prepared sample data files and tested the app by running it with various regex patterns. 
-We then compared the output files to the expected results to verify correctness.
+- Test with `main`: Tested the app by manually running it, and then compared the output files to the expected results to verify correctness.
+- Test with `junit`: Created a `junit` test (`JavaGrepLambdaImpTest.java`) to verify the `process()` method. This test ensures that given a specific regex pattern and input directory (`data/txt`), the app correctly searches files, matches lines, and writes output to `out/test_output.txt`. The test checks that the output file exists and contains matched lines, confirming the core workflow.
 
 ## Deployment
 
