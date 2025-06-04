@@ -8,3 +8,12 @@ target/
 .idea/
 .eclipse/
 core_java/grep/log/grep.out
+
+# Jupyter
+.cache/
+.ipynb_checkpoints/
+.jupyter/
+.local/
+runtime/
+.npm/
+.config/
