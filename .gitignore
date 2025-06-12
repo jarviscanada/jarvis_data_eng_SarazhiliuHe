@@ -17,3 +17,4 @@ core_java/grep/log/grep.out
 runtime/
 .npm/
 .config/
+.ipython/
