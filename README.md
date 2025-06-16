@@ -8,7 +8,7 @@ I earned a Master's degree in Systems Design Engineering (Artificial Intelligenc
 
 **Competent:** Angular, Node.js/Express, MongoDB, CI/CD, Docker, Pandas/NumPy
 
-**Familiar:** Pattern Recognition, TensorFlow, PyTorch, Scikit-Learn, Figma
+**Familiar:** AI/Machine Learning, TensorFlow, PyTorch, Scikit-Learn, Figma
 
 ## Jarvis Projects
 
@@ -17,7 +17,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 
 **Linux Cluster Monitoring Agent** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/linux_sql)]: Built the Jarvis Linux Cluster Monitoring Agent to assist the Linux Cluster Administration (LCA) team in managing a multi-node Rocky Linux environment. Implemented a Bash Script to collect static system information, such as CPU architecture, memory, and disk specs, executed once on each node. Automated the collection of real-time resource usage data, such as CPU, memory, and disk usage, using a Bash script triggered by a Cron job every minute. Deployed a PostgreSQL database in a Docker container to store the collected data in a portable environment. Used Git and GitHub for source code management and version control.
 
-**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/core_java)]: Grep App: Developed Grep App, a Java application that mimics the Linux grep command to search for lines matching a regular expression across a directory of text files. Leveraged Java 8 Lambda and Stream APIs for efficient and readable data processing. Utilized Maven for project build and dependency management. Dockerized the application for seamless distribution and deployment.
+**Java Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/core_java)]: Developed Grep App, a Java application that mimics the Linux grep command to search for lines matching a regular expression across a directory of text files. Leveraged Java 8 Lambda and Stream APIs for efficient and readable data processing. Utilized Maven for project build and dependency management. Dockerized the application for seamless distribution and deployment.
+
+**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/python_data_anlytics)]: Extracted and loaded raw retail data into a PostgreSQL Data Warehouse (OLAP) provisioned locally with Docker. Conducted in-depth sales and customer behavior analysis in Jupyter Notebook using Python, Pandas, and NumPy. Delivered insights and visualizations via GitHub to support targeted marketing strategy.
 
 
 ## Highlighted Projects
@@ -28,9 +30,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (APR 2025-present)**: Developed a Linux Cluster Monitoring Agent using Bash, PostgreSQL, and Docker to track and store system and resource usage data across multiple nodes. Designed relational database schemas and implemented queries in PostgreSQL to support structured data processing and reporting. Built Java applications focused on object-oriented design, data structures, and algorithm implementation.
+**Software Developer, Jarvis (APR 2025-present)**: Collaborated within an Agile team to deliver diverse software development projects across multiple sprints. Gained hands-on experience in technologies such as Linux/Bash scripting, SQL, Java, and Python, adapting quickly to new technical challenges. Worked with Google Cloud Platform (GCP) to provision virtual machines and access company infrastructure via remote desktop. Used Git for version control and Docker for containerization to build, test, and maintain scalable applications.
 
-**Full Stack Software Developer, Skill4Skill (MAR 2025-present)**: Collaborated with cross-functional teams to develop Skill4Skill, a platform where individuals can exchange expertise, using TypeScript, React, Node.js and MongoDB for data management. Worked with designers and project managers to improve user experiences, and used Jira for user story development and backlog management. Maintained documentation for codebases and workflows and adapted content based on product updates and user feedback.
+**Full Stack Software Developer, Skill4Skill (MAR 2025-present)**: Collaborated with cross-functional teams to develop Skill4Skill, a web platform where individuals can exchange expertise. Built a responsive and accessible frontend in Next.js, ensuring alignment with design specifications and style guides, and worked closely with designers to refine UI/UX. Designed MongoDB schemas and developed RESTful APIs with Express.js, and integrated backend APIs with frontend components for seamless feature delivery. Maintained documentation for codebases, workflows, and API specifications. Participated in Agile development using Jira for sprint planning, user story tracking, and backlog management.
 
 **Research Assistant, University of Waterloo (MAY 2024-DEC 2024)**: Researched and developed supply chain optimization models with Python, Pandas, Numpy and Gurobi. Documented findings in analytical reports, communicated issues and solutions effectively with the supervising professor, and refined the paper based on feedback.
 
@@ -52,4 +54,4 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 - First prize in the National Contest in Big Data Analysis and Mining
 - Third Prize in the China Undergraduate Mathematical Contest in Modeling
 - Chinese Classical Dance (Captain of Dance Team at South China University of Technology)
-- Volunteer Experience in Environmental and Community Service
+- Member of Campus Volunteer Service Team

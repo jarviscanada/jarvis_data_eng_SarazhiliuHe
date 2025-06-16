@@ -31,7 +31,7 @@ skills:
     - Pandas/NumPy
   # At least 5 skills
   familiar:
-    - Pattern Recognition
+    - AI/Machine Learning
     - TensorFlow
     - PyTorch
     - Scikit-Learn
@@ -44,17 +44,17 @@ jarvis_projects:
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Built the Jarvis Linux Cluster Monitoring Agent to assist the Linux Cluster Administration (LCA) team in managing a multi-node Rocky Linux environment. Implemented a Bash Script to collect static system information, such as CPU architecture, memory, and disk specs, executed once on each node. Automated the collection of real-time resource usage data, such as CPU, memory, and disk usage, using a Bash script triggered by a Cron job every minute. Deployed a PostgreSQL database in a Docker container to store the collected data in a portable environment. Used Git and GitHub for source code management and version control.
-  - name: "Core Java Apps"
+  - name: "Java Grep App"
     git_url: "/core_java"
-    description: "Grep App: Developed Grep App, a Java application that mimics the Linux grep command to search for lines matching a regular expression across a directory of text files. Leveraged Java 8 Lambda and Stream APIs for efficient and readable data processing. Utilized Maven for project build and dependency management. Dockerized the application for seamless distribution and deployment."
+    description: "Developed Grep App, a Java application that mimics the Linux grep command to search for lines matching a regular expression across a directory of text files. Leveraged Java 8 Lambda and Stream APIs for efficient and readable data processing. Utilized Maven for project build and dependency management. Dockerized the application for seamless distribution and deployment."
 #      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
 #      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
 #  - name: "Springboot App"
 #    git_url: "/springboot"
 #    description: ""
-#  - name: "Python Data Analytics"
-#    git_url: "/python_data_anlytics"
-#    description: ""
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: "Extracted and loaded raw retail data into a PostgreSQL Data Warehouse (OLAP) provisioned locally with Docker. Conducted in-depth sales and customer behavior analysis in Jupyter Notebook using Python, Pandas, and NumPy. Delivered insights and visualizations via GitHub to support targeted marketing strategy."
 #  - name: "Hadoop"
 #    git_url: "/hadoop"
 #    description: ""
@@ -87,11 +87,11 @@ professional_experience:
     company: "Jarvis"
     duration: "APR 2025-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed a Linux Cluster Monitoring Agent using Bash, PostgreSQL, and Docker to track and store system and resource usage data across multiple nodes. Designed relational database schemas and implemented queries in PostgreSQL to support structured data processing and reporting. Built Java applications focused on object-oriented design, data structures, and algorithm implementation."
+    description: "Collaborated within an Agile team to deliver diverse software development projects across multiple sprints. Gained hands-on experience in technologies such as Linux/Bash scripting, SQL, Java, and Python, adapting quickly to new technical challenges. Worked with Google Cloud Platform (GCP) to provision virtual machines and access company infrastructure via remote desktop. Used Git for version control and Docker for containerization to build, test, and maintain scalable applications."
   - title: "Full Stack Software Developer"
     company: "Skill4Skill"
     duration: "MAR 2025-present"
-    description: "Collaborated with cross-functional teams to develop Skill4Skill, a platform where individuals can exchange expertise, using TypeScript, React, Node.js and MongoDB for data management. Worked with designers and project managers to improve user experiences, and used Jira for user story development and backlog management. Maintained documentation for codebases and workflows and adapted content based on product updates and user feedback."
+    description: "Collaborated with cross-functional teams to develop Skill4Skill, a web platform where individuals can exchange expertise. Built a responsive and accessible frontend in Next.js, ensuring alignment with design specifications and style guides, and worked closely with designers to refine UI/UX. Designed MongoDB schemas and developed RESTful APIs with Express.js, and integrated backend APIs with frontend components for seamless feature delivery. Maintained documentation for codebases, workflows, and API specifications. Participated in Agile development using Jira for sprint planning, user story tracking, and backlog management."
   - title: "Research Assistant"
     company: "University of Waterloo"
     duration: "MAY 2024-DEC 2024"
@@ -131,4 +131,4 @@ others:
   - title: "Activities/Hobbies"
     bullets:
       - "Chinese Classical Dance (Captain of Dance Team at South China University of Technology)"
-      - "Volunteer Experience in Environmental and Community Service"
+      - "Member of Campus Volunteer Service Team"
