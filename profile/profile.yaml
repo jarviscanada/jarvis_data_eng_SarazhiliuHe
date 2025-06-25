@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I earned a Master's degree in Systems Design Engineering (Artificial Intelligence and Machine Learning Specialization) from the University of Waterloo, where I built great foundation for software engineering and AI. Eager to expand my skill set, I completed a software engineering diploma program at BrainStation, gaining hands-on experience in full-stack web development. I am an energetic software developer with professional experience as a Software Engineer at Jarvis and volunteer experience as a full-stack developer at Skill4Skill, driven by a passion for learning and applying new technologies to solve real-world problems and build innovative solutions.
+summary: I earned a Master's degree in Systems Design Engineering (Artificial Intelligence and Machine Learning Specialization) from the University of Waterloo, where I built great foundation for software engineering and AI. Eager to expand my skill set, I completed a software engineering diploma program at BrainStation, gaining hands-on experience in full-stack web development. I am an energetic software developer with professional experience as a Software Engineer at Jarvis and a Full-Stack Developer at Skill4Skill, driven by a passion for building intuitive and scalable web applications that deliver real value to end users and solve real-world challenges.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -54,7 +54,7 @@ jarvis_projects:
 #    description: ""
   - name: "Python Data Analytics"
     git_url: "/python_data_anlytics"
-    description: "Developed a Proof of Concept (PoC) data analysis project for LGS, a retail company, to help the marketing team optimize campaign strategies. Designed and provisioned a local PostgreSQL OLAP data warehouse using Docker to ingest and organize raw retail data. Performed in-depth sales performance and customer behavior analysis using Python (Pandas, NumPy) in Jupyter Notebook, identifying key purchasing patterns and trends.Delivered insights and visualizations via GitHub to support data-driven decision-making."
+    description: "Developed a Proof of Concept (PoC) data analysis project for LGS, a retail company, to help the marketing team optimize campaign strategies. Designed and provisioned a local PostgreSQL OLAP data warehouse using Docker to ingest and organize raw retail data. Performed in-depth sales performance and customer behavior analysis using Python (Pandas, NumPy) in Jupyter Notebook, identifying key purchasing patterns and trends. Delivered insights and visualizations via GitHub to support data-driven decision-making."
 #  - name: "Hadoop"
 #    git_url: "/hadoop"
 #    description: ""
@@ -87,7 +87,7 @@ professional_experience:
     company: "Jarvis"
     duration: "APR 2025-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Collaborated within an Agile team to deliver diverse software development projects across multiple sprints. Gained hands-on experience in technologies such as Linux/Bash scripting, SQL, Java, and Python, adapting quickly to new technical challenges. Worked with Google Cloud Platform (GCP) to provision virtual machines and access company infrastructure via remote desktop. Used Git for version control and Docker for containerization to build, test, and maintain scalable applications."
+    description: "Collaborated within an Agile team to deliver diverse software development projects across multiple sprints. Developed backend tools and automation scripts using Linux/Bash, SQL, Java, and Python to support data processing and system maintenance tasks. Worked with Google Cloud Platform (GCP) to provision virtual machines and access company infrastructure via remote desktop. Used Git for version control and Docker for containerization to build, test, and maintain scalable applications."
   - title: "Full Stack Software Developer"
     company: "Skill4Skill"
     duration: "MAR 2025-present"
