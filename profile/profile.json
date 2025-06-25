@@ -2,7 +2,8 @@
   "education": [
     {
       "awards_achievements": [
-        "GPA: 85/100"
+        "GPA: 85/100",
+        "Specialization in Artificial Intelligence and Machine Learning"
       ],
       "degree": "Master of Engineering",
       "department": "Systems Design Engineering",
@@ -14,7 +15,9 @@
         "GPA: 92/100",
         "First-class Academic Scholarship",
         "Student Science and Technology Innovation Competition Scholarship",
-        "PG Logistics Scholarship"
+        "PG Logistics Scholarship",
+        "First prize in the National Contest in Big Data Analysis and Mining",
+        "Third Prize in the China Undergraduate Mathematical Contest in Modeling"
       ],
       "degree": "Bachelor of Engineering",
       "department": "Logistics Engineering",
@@ -47,7 +50,7 @@
       "name": "Java Grep App"
     },
     {
-      "description": "Extracted and loaded raw retail data into a PostgreSQL Data Warehouse (OLAP) provisioned locally with Docker. Conducted in-depth sales and customer behavior analysis in Jupyter Notebook using Python, Pandas, and NumPy. Delivered insights and visualizations via GitHub to support targeted marketing strategy.",
+      "description": "Developed a Proof of Concept (PoC) data analysis project for LGS, a retail company, to help the marketing team optimize campaign strategies. Designed and provisioned a local PostgreSQL OLAP data warehouse using Docker to ingest and organize raw retail data. Performed in-depth sales performance and customer behavior analysis using Python (Pandas, NumPy) in Jupyter Notebook, identifying key purchasing patterns and trends.Delivered insights and visualizations via GitHub to support data-driven decision-making.",
       "git_url": "/python_data_anlytics",
       "name": "Python Data Analytics"
     }
@@ -57,21 +60,16 @@
     {
       "bullets": [
         "BrainStation Software Engineering Diploma (2024)",
-        "Balsillie School of International Affairs Technology Governance Summer School (2024)"
+        "Applied Python Data Engineering Specialization, Duke University (Coursera), May 2024",
+        "Google Data Analytics Specialization, Google (Coursera), May 2024"
       ],
       "title": "Certificates"
     },
     {
       "bullets": [
-        "First prize in the National Contest in Big Data Analysis and Mining",
-        "Third Prize in the China Undergraduate Mathematical Contest in Modeling"
-      ],
-      "title": "Awards"
-    },
-    {
-      "bullets": [
-        "Chinese Classical Dance (Captain of Dance Team at South China University of Technology)",
-        "Member of Campus Volunteer Service Team"
+        "Dancing: Captain of Dance Team at South China University of Technology",
+        "Volunteer Work: Member of Campus Volunteer Service Team (stray cat rescue and campus waste recycling)",
+        "Reading: Avid reader and fan of Agatha Christie's detective fiction."
       ],
       "title": "Activities/Hobbies"
     }
@@ -91,18 +89,17 @@
     },
     {
       "company": "University of Waterloo",
-      "description": "Researched and developed supply chain optimization models with Python, Pandas, Numpy and Gurobi. Documented findings in analytical reports, communicated issues and solutions effectively with the supervising professor, and refined the paper based on feedback.",
+      "description": "Researched and developed mathematical optimization models to improve multi-echelon supply chain performance, focusing on minimizing costs and improving inventory allocation efficiency. Applied Python, Pandas, NumPy, and Gurobi to build and test mixed-integer linear programming (MILP) models simulating real-world supply chain scenarios. Drafted detailed analytical reports summarizing methodology, results, and analyses. Collaborated closely with the supervising professor to iteratively refine the research paper.",
       "duration": "MAY 2024-DEC 2024",
       "title": "Research Assistant"
     }
   ],
   "skills": {
     "competent": [
+      "Spring Boot",
       "Angular",
-      "Node.js/Express",
       "MongoDB",
       "CI/CD",
-      "Docker",
       "Pandas/NumPy"
     ],
     "familiar": [
@@ -114,12 +111,13 @@
     ],
     "proficient": [
       "Java",
-      "Spring Boot",
+      "Python",
       "Linux/Bash",
       "RDBMS/SQL",
+      "Docker",
       "JavaScript/TypeScript",
-      "React",
-      "Python",
+      "React/Next.js",
+      "Node.js/Express",
       "Agile/Scrum",
       "Git"
     ]
