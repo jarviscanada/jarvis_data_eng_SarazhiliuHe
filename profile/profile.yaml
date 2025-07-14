@@ -35,6 +35,8 @@ skills:
     - TensorFlow
     - PyTorch
     - Scikit-Learn
+    - Hadoop
+    - Spark
     - Figma
 
 # List of Jarvis projects
@@ -58,9 +60,9 @@ jarvis_projects:
 #  - name: "Hadoop"
 #    git_url: "/hadoop"
 #    description: ""
-#  - name: "Spark"
-#    git_url: "/spark"
-#    description: ""
+  - name: "Spark"
+    git_url: "/spark"
+    description: "Developed a Hadoop-based analytics workflow using Google Cloud Dataproc and Apache Zeppelin. Exported the WDI dataset from BigQuery to Google Cloud Storage and transformed raw CSV files into optimized Parquet tables in HDFS using HiveQL. Performed exploratory and complex analytics using PySpark within Zeppelin notebooks. Provisioned an Azure Databricks workspace with a Spark cluster to analyze LGS retail data using PySpark Structured APIs."
 #  - name: "Cloud/DevOps"
 #    git_url: "/cloud_devops"
 #    description: ""

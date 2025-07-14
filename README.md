@@ -8,7 +8,7 @@ I earned a Master's degree in Systems Design Engineering (Artificial Intelligenc
 
 **Competent:** Spring Boot, Angular, MongoDB, CI/CD, Pandas/NumPy
 
-**Familiar:** AI/Machine Learning, TensorFlow, PyTorch, Scikit-Learn, Figma
+**Familiar:** AI/Machine Learning, TensorFlow, PyTorch, Scikit-Learn, Hadoop, Spark, Figma
 
 ## Jarvis Projects
 
@@ -20,6 +20,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Sarazhiliu
 **Java Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/core_java)]: Developed Grep App, a Java application that mimics the Linux grep command to search for lines matching a regular expression across a directory of text files. Leveraged Java 8 Lambda and Stream APIs for efficient and readable data processing. Utilized Maven for project build and dependency management. Dockerized the application for seamless distribution and deployment.
 
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/python_data_anlytics)]: Developed a Proof of Concept (PoC) data analysis project for LGS, a retail company, to help the marketing team optimize campaign strategies. Designed and provisioned a local PostgreSQL OLAP data warehouse using Docker to ingest and organize raw retail data. Performed in-depth sales performance and customer behavior analysis using Python (Pandas, NumPy) in Jupyter Notebook, identifying key purchasing patterns and trends. Delivered insights and visualizations via GitHub to support data-driven decision-making.
+
+**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SarazhiliuHe/tree/master/spark)]: Developed a Hadoop-based analytics workflow using Google Cloud Dataproc and Apache Zeppelin. Exported the WDI dataset from BigQuery to Google Cloud Storage and transformed raw CSV files into optimized Parquet tables in HDFS using HiveQL. Performed exploratory and complex analytics using PySpark within Zeppelin notebooks. Provisioned an Azure Databricks workspace with a Spark cluster to analyze LGS retail data using PySpark Structured APIs.
 
 
 ## Highlighted Projects
